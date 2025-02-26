@@ -4,7 +4,7 @@ export default function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/db/fetchQuestion')
+    axios.get('https://faq-generator-backend-git-main-rishi-jain2602s-projects.vercel.app/db/fetchQuestion')
       .then(response => {
         setData(response.data);
       })
