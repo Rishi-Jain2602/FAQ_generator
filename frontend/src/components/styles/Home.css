@@ -32,6 +32,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 10px;
+    table-layout: fixed;
   }
   
   .faq-table thead {
@@ -48,6 +49,20 @@
   .faq-table tbody tr:hover {
     background-color: #f1f1f1;
   }
+  .faq-table th:nth-child(1), .faq-table td:nth-child(1) {
+    width: 5%; 
+  }
+  .faq-table th:nth-child(2), .faq-table td:nth-child(2) {
+    width: 10%; 
+  }
+  .faq-table th:nth-child(5), .faq-table td:nth-child(5) {
+    width: 40%; 
+  }
+  
+  .faq-table th:nth-child(6), .faq-table td:nth-child(6) {
+    width: 25%; 
+  }
+  
   
   /* Responsive Styles */
 @media only screen and (max-width: 768px) {

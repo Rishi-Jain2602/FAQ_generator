@@ -14,6 +14,14 @@ export default function Home() {
       });
 
   }, []);
+  const formatImprovementText = (text) => {
+    return text.split('\n').map((line, index) => {
+      const formattedLine = line.split('**').map((part, partIndex) => 
+        partIndex % 2 === 1 ? <strong key={partIndex}>{part}</strong> : part
+      );
+      return <div key={index}>{formattedLine}</div>;
+    });
+  };
 
   return (
     <div className='container'>
@@ -36,8 +44,8 @@ export default function Home() {
             <td>{item.query}</td>
             <td>{item.location}</td>
             <td>{item.DB_Source}</td>
-            <td>{item.Response}</td>
-            <td>{item.Website}</td>
+            <td>{formatImprovementText(item.Response)}</td>
+            <td>{item.Website.join(', ')}</td> 
             </tr>
 
       ))}
