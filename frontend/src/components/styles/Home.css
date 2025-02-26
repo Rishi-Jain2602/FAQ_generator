@@ -1,0 +1,102 @@
+/* General styles for better aesthetics */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #2c3e50;
+  }
+  
+  .faq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  .faq-table thead {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .faq-table th, .faq-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .faq-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .faq-table {
+      width: 100%;
+      font-size: 0.9em;
+    }
+  
+    .faq-table th, .faq-table td {
+      padding: 10px;
+      text-align: center; /* Center-align the text */
+    }
+  
+    .faq-table thead {
+      display: none; /* Hide the table header for mobile */
+    }
+  
+    .faq-table tbody tr {
+      display: block;
+      margin-bottom: 15px;
+      text-align: center; /* Ensure rows are centered */
+    }
+  
+    .faq-table tbody tr td {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px; /* Remove padding-left to ensure center alignment */
+      position: relative;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .faq-table tbody tr td::before {
+      content: attr(data-label);
+      position: relative;
+      display: block;
+      font-weight: bold;
+      text-align: center; /* Ensure labels are centered */
+      margin-bottom: 5px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .faq-table {
+      font-size: 0.8em;
+    }
+  
+    .faq-table tbody tr td::before {
+      padding: 0; /* Ensure labels are centered even for smaller screens */
+    }
+  }
+  

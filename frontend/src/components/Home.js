@@ -1,5 +1,6 @@
 import React,{ useEffect, useState }  from 'react'
 import axios from 'axios'
+import './styles/Home.css'
 export default function Home() {
   const [data, setData] = useState([]);
 
@@ -16,8 +17,9 @@ export default function Home() {
 
   return (
     <div className='container'>
-      <table className="table">
-        <thead className="thead-dark">
+      <h1 className="title">FAQ Generator</h1>
+      <table className="faq-table">
+        <thead>
           <tr>
             <th scope="col">S.No</th>
             <th scope="col">Query</th>
