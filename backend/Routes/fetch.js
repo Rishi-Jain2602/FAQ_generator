@@ -14,5 +14,17 @@ router.get("/fetchQuestion", async (req,res)=>{
   }
 })
 
+router.get("/fetchQuestion/location", async (req,res)=>{
+  location = req.query.location
+ 
+  try {
+      const images = await QuestionSchema.find({"location":location});
+      res.json(images);
+  } catch (error) {
+      console.log(error);
+      res.status(500).json({message:"Server Error"})
+  }
+})
+
 
 module.exports = router;
